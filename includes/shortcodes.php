@@ -68,7 +68,7 @@ function taa_account_tabs( $atts, $content = null ) {
 		}
 
 		// Skip if shortcode does not exist.
-		if ( shortcode_exists( $key ) ) {
+		if ( ! shortcode_exists( $key ) ) {
 			continue;
 		}
 
