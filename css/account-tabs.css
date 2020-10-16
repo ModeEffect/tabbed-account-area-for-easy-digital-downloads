@@ -1,0 +1,44 @@
+/* Account Tabs
+ * ========================================================================== */
+ ul.taa-account-tabs {
+	margin: 0 0 -2px 0;
+	overflow: hidden;
+}
+
+ul.taa-account-tabs li {
+	display: inline-block;
+	margin: 0 4px 0 0;
+}
+
+ul.taa-account-tabs li a {
+	display: block;
+	background: #f0f0f0;
+	color: #555;
+	font-weight: 700;
+	padding: 10px 30px;
+	border: #eee solid 2px;
+	border-bottom: 0 none;
+	border-radius: 5px 5px 0 0;
+	text-decoration: none;
+	outline: none;
+}
+
+ul.taa-account-tabs li a:hover {
+	color: #888;
+}
+
+ul.taa-account-tabs li.ui-tabs-active a {
+	background: #fff;
+	padding-bottom: 12px;
+	margin-bottom: -2px;
+}
+
+ul.taa-account-tabs li.ui-tabs-active a:hover {
+	color: #555; /*this counteracts the tab color hover*/
+}
+
+.taa-tab-content {
+	padding: 20px;
+	border: 2px solid #eee;
+	overflow: hidden;
+}

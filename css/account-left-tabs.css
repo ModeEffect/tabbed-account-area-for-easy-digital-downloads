@@ -1,0 +1,61 @@
+#taa-account-tab-wrap {
+    position: relative;
+    padding-left: 6.5em;
+}
+#taa-account-tab-wrap ul {
+  list-style-type: none;
+}
+#taa-account-tab-wrap .ui-tabs-nav {
+    position: absolute;
+    left: 0.25em;
+    top: 0.25em;
+    bottom: 0.25em;
+    width: 6em;
+    padding: 0.2em 0 0.2em 0.2em;
+}
+#taa-account-tab-wrap .ui-tabs-nav li {
+    right: 1px;
+    width: 100%;
+    border-right: none;
+    border-bottom-width: 1px !important;
+    -moz-border-radius: 4px 0px 0px 4px;
+    -webkit-border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 0px 0px 4px;
+    overflow: hidden;
+}
+#taa-account-tab-wrap .ui-tabs-nav li.ui-tabs-selected,
+#taa-account-tab-wrap .ui-tabs-nav li.ui-state-active {
+    border-right: 1px solid transparent;
+}
+#taa-account-tab-wrap .ui-tabs-nav li a {
+    float: right;
+    width: 100%;
+    text-align: right;
+    background: #f0f0f0;
+  	color: #555;
+  	font-weight: 700;
+  	border: #fff solid 2px;
+  	border-bottom: 0 none;
+  	border-radius: 5px 5px 0 0;
+  	text-decoration: none;
+  	outline: none;
+}
+#taa-account-tab-wrap .ui-tabs-nav li a {
+  color: #888;
+}
+ul.taa-account-tabs li.ui-tabs-active a {
+	background: #fff;
+	padding-bottom: 12px;
+	margin-bottom: -2px;
+}
+ul.taa-account-tabs li.ui-tabs-active a:hover {
+	color: #555; /*this counteracts the tab color hover*/
+}
+#taa-account-tab-wrap .ui-tabs-panel {
+  height: 40em;
+}
+.taa-tab-content {
+	padding: 20px;
+	border: 2px solid #eee;
+	overflow: hidden;
+}
