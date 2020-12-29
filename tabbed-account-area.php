@@ -5,7 +5,7 @@ Description: Creates tabbed content for your account area on Easy Digital Downlo
 Plugin URI: https://scottdeluzio.com
 Author: Scott DeLuzio
 Author URI: https://scottdeluzio.com
-Version: 1.0.3
+Version: 1.1.0
 Text Domain: tabbed-account-area
 */
 

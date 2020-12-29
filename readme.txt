@@ -2,8 +2,8 @@
 Contributors: scott.deluzio
 Tags: Easy Digital Downloads, Affiliate WP
 Requires at least: 2.8.0
-Tested up to: 4.9
-Stable tag: 1.0.3
+Tested up to: 5.6
+Stable tag: 1.1.0
 License: GNU Version 2 or Any Later Version
 
 Shortcode to create tabbed account area for Easy Digital Downloads and AffiliateWP
@@ -88,6 +88,10 @@ The tabs will be listed in the order you have the respective attributes in the s
 For example, [account_tabs purchase_history="Purchase History" edd_profile_editor="Edit Your Profile"] will have Purchase History first, and Edit Your Profile second. [account_tabs edd_profile_editor="Edit Your Profile" purchase_history="Purchase History"] will have Edit Your Profile first, and Purchase History second.
 
 == Changelog ==
+= 1.1.0 =
+* Refactored with code formatting to follow WordPress coding standards.
+* Ability to set logged out text for the `[hidden_content]` shortcode.
+* Check whether shortcodes exist before adding the tab/content for it in the [account_tabs] shortcode.
 = 1.0.3 =
 * Fix: JavaScript for tabs was being loaded on all front end pages. On pages where [account_tabs] shortcode wasn't present this produced an error.
 * New: Included translatable .pot file.
@@ -99,6 +103,7 @@ For example, [account_tabs purchase_history="Purchase History" edd_profile_edito
 * Initial Release
 
 == Upgrade Notice ==
-= 1.0.3 =
-* Fix: JavaScript for tabs was being loaded on all front end pages. On pages where [account_tabs] shortcode wasn't present this produced an error.
-* New: Included translatable .pot file.
+= 1.1.0 =
+* Refactored with code formatting to follow WordPress coding standards.
+* Ability to set logged out text for the `[hidden_content]` shortcode.
+* Check whether shortcodes exist before adding the tab/content for it in the [account_tabs] shortcode.
