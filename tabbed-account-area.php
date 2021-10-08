@@ -4,7 +4,7 @@ Plugin Name: Tabbed Account Area for Easy Digital Downloads
 Description: Creates tabbed content for your account area on Easy Digital Downloads
 Plugin URI: https://amplifyplugins.com
 Author: AMP-MODE
-Author URI: https://scottdeluzio.com
+Author URI: https://amplifyplugins.com
 Version: 1.2.0
 Text Domain: tabbed-account-area
 */
