@@ -32,14 +32,22 @@ function taa_account_tabs( $atts, $content = null ) {
 	  'affiliate_area'      => 'false',
 	  ), $atts );*/
 
-	if ( 'default' === $atts['style'] ) {
-		wp_enqueue_style( 'taa-tab-style' );
-	} elseif ( 'left' === $atts['style'] ) {
-		wp_enqueue_style( 'taa-tab-left-style' );
-	} elseif ( 'right' === $atts['style'] ) {
-		wp_enqueue_style( 'taa-tab-right-style' );
-	} elseif ( 'custom' === $atts['style'] ) {
-		wp_enqueue_style( 'taa-tab-custom-style', get_stylesheet_directory_uri() . '/css/taa.css' );
+	switch ( $atts['style'] ) {
+		case 'left':
+			wp_enqueue_style( 'taa-tab-left-style' );
+			break;
+
+		case 'right':
+			wp_enqueue_style( 'taa-tab-right-style' );
+			break;
+
+		case 'custom':
+			wp_enqueue_style( 'taa-tab-custom-style', get_stylesheet_directory_uri() . '/css/taa.css' );
+			break;
+
+		default:
+			wp_enqueue_style( 'taa-tab-style' );
+			break;
 	}
 
 	if ( isset( $_GET['tab'] ) && isset( $atts['affiliate_area'] ) ) {
@@ -76,7 +84,20 @@ function taa_account_tabs( $atts, $content = null ) {
 
 		$tab_content .= '<div id="' . esc_attr( $key ) . '">';
 		$tab_content .= '<div id="' . esc_attr( $key ) . '_title">' . esc_html( $value ) . '</div>';
+
+		switch ( $key ) {
+			case 'edd_profile_editor':
+				if ( rtrim( edd_get_current_page_url(), '/' ) == get_permalink() ) {
+					add_filter( 'edd_get_current_page_url', 'taa_edd_add_tab_to_profile_editor_redirect' );
+				}
+				break;
+
+			default:
+
+				break;
+		}
 		$tab_content .= do_shortcode( '[' . $key . ']' );
+
 		$tab_content .= '</div>';
 
 		// Handle affiliate area reCAPTCHA script.
@@ -132,3 +153,7 @@ function taa_account_area_hidden_content( $atts, $content = null ) {
 }
 
 add_shortcode( 'hidden_content', 'taa_account_area_hidden_content' );
+
+function taa_edd_add_tab_to_profile_editor_redirect( $uri ) {
+	return $uri . '#edd_profile_editor';
+}
