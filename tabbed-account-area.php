@@ -5,7 +5,7 @@ Description: Creates tabbed content for your account area on Easy Digital Downlo
 Plugin URI: https://amplifyplugins.com
 Author: AMP-MODE
 Author URI: https://amplifyplugins.com
-Version: 1.2.0
+Version: 1.2.1
 Text Domain: tabbed-account-area
 */
 

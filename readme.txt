@@ -2,7 +2,7 @@
 Contributors: scott.deluzio, ampmode
 Tags: Easy Digital Downloads, Affiliate WP
 Requires at least: 2.8.0
-Tested up to: 5.8.1
+Tested up to: 6.1.1
 Stable tag: 1.2.0
 License: GNU Version 2 or Any Later Version
 
@@ -88,6 +88,8 @@ The tabs will be listed in the order you have the respective attributes in the s
 For example, [account_tabs purchase_history="Purchase History" edd_profile_editor="Edit Your Profile"] will have Purchase History first, and Edit Your Profile second. [account_tabs edd_profile_editor="Edit Your Profile" purchase_history="Purchase History"] will have Edit Your Profile first, and Purchase History second.
 
 == Changelog ==
+= 1.2.1 =
+* Fix: The code to register the localized data doesn't work properly. It moved to the callback of the shortcode
 = 1.2.0 =
 * Update: When saving EDD profile, the form redirected to the first tab on the page. Now when the Profile tab is not first, the page will redirect to the Profile tab after user clicks save.
 = 1.1.0 =
