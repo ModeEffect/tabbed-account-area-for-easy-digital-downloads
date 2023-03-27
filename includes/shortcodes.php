@@ -12,7 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return string The shortcode response.
  */
 function taa_account_tabs( $atts, $content = null ) {
-	if ( ! isset( $atts['style'] ) ) {
+
+	if ( is_array($atts) && ! isset( $atts['style'] ) ) {
 		$atts['style'] = 'default';
 	}
 
@@ -49,6 +50,7 @@ function taa_account_tabs( $atts, $content = null ) {
 			wp_enqueue_style( 'taa-tab-style' );
 			break;
 	}
+    wp_register_script( 'taa-account-tabs', TAA_PLUGIN_URL . '/js/account-tabs.js', array( 'jquery-ui-tabs' ), '3.0.0', true );
 
 	if ( isset( $_GET['tab'] ) && isset( $atts['affiliate_area'] ) ) {
 		// We need to pass the affiliate tab order number to the script so the active tab is affiliates on the page reload.
